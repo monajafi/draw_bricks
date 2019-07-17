@@ -37,8 +37,8 @@ class BrickRows extends StatelessWidget {
   Widget brick(column, row) {
     BorderSide brickSide = BorderSide(color: Colors.black, width: 1);
     Border brickBorder;
-    if (column == PYRAMID_HEIGHT - 1 && row < (column - 1)) {
-      brickBorder =  ? 
+    if (column == PYRAMID_HEIGHT - 1) {
+      brickBorder = row == column - 1 ? 
         Border(top: brickSide, left: brickSide,right: brickSide, bottom: brickSide):
         Border(top: brickSide, left: brickSide, bottom: brickSide); 
     } else if (row == column - 1) {
